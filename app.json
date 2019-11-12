@@ -1,0 +1,50 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/cates/cates",
+        "pages/cart/cart",
+        "pages/search/search",
+        "pages/my/my",
+        "pages/goods_detail/main"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#8d1ef0",
+        "navigationBarTitleText": "京乐",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "selectedColor": "#D81E06",
+        "list": [{
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "/assets/icons/home.png",
+                "selectedIconPath": "/assets/icons/home-active.png"
+            },
+            {
+                "pagePath": "pages/cates/cates",
+                "text": "商品",
+                "iconPath": "/assets/icons/cates.png",
+                "selectedIconPath": "/assets/icons/cates-active.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "搜索",
+                "iconPath": "/assets/icons/search.png",
+                "selectedIconPath": "/assets/icons/search-active.png"
+            }, {
+                "pagePath": "pages/cart/cart",
+                "text": "购物车",
+                "iconPath": "/assets/icons/cart.png",
+                "selectedIconPath": "/assets/icons/cart-active.png"
+            }, {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "/assets/icons/my.png",
+                "selectedIconPath": "/assets/icons/my-active.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
