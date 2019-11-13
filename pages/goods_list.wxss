@@ -1,0 +1,13 @@
+/* pages/goods_list.wxss */
+
+.step_line {
+    border: 1rpx solid #eeeeee;
+}
+
+.over {
+    text-align: center;
+    color: red;
+    font-size: 24rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+}

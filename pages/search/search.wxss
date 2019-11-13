@@ -1,1 +1,14 @@
-/* pages/search/search.wxss */
+.history_title {
+    display: flex;
+    justify-content: space-between;
+    padding: 10rpx 20rpx;
+}
+
+.history_title text:nth-child(1) {
+    font-size: 28rpx;
+    font-weight: bold;
+}
+
+.tag {
+    margin: 15rpx;
+}

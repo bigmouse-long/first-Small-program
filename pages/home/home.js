@@ -13,6 +13,14 @@ Page({
         floorList: []
     },
 
+    goodsList: function(e) {
+        // console.log(e)
+        // 实现跳转页面
+        wx.navigateTo({
+            url: e.target.dataset.url
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
@@ -71,7 +79,7 @@ Page({
             url: 'https://www.zhengzhicheng.cn/api/public/v1/home/floordata',
             method: 'GET',
             success: function(res) {
-                console.log(res);
+                // console.log(res);
 
                 if (res.data.meta.status !== 200) {
                     return wx.showToast({

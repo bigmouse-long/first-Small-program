@@ -1,6 +1,6 @@
 <!-- 轮播图区域 -->
-<swiper indicator-dots autoplay circular interval="1500">
-    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+<swiper class="swiper" indicator-dots autoplay circular interval="1500">
+    <swiper-item class="swiper-item" wx:for="{{swiperList}}" wx:key="index">
         <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
             <image src="{{item.image_src}}"></image>
         </navigator>
@@ -19,6 +19,10 @@
 <!-- 楼层区域 -->
 <view class="floor-container">
     <view class="floor-item" wx:for="{{floorList}}" wx:key="index">
-        <image src="{{item.floor_title.image_src}}" />
+        <image class="floor-item-title" src="{{item.floor_title.image_src}}" />
+        <!-- 楼层图片 -->
+        <view class="floor-img">
+            <image class="floor-img-pic" src="{{item.image_src}}" wx:for="{{item.product_list}}" wx:key="index" style="width: {{item.image_width}}rpx;" bindtap="goodsList" data-url='{{item.navigator_url}}' />
+        </view>
     </view>
 </view>

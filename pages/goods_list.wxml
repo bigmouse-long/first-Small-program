@@ -1,0 +1,10 @@
+<!--pages/goods_list.wxml-->
+<!-- 商品卡片视图 -->
+<view>
+    <block wx:for="{{goodsList}}" wx:key="index">
+        <van-card num="{{item.goods_number}}" price="{{item.goods_price}}" title="{{item.goods_name}}" thumb="{{ item.goods_small_logo }}" bindtap="goodsDetail" data-id="{{item.goods_id}}"/>
+        <view class="step_line"></view>
+    </block>
+    <!-- 数据加载完毕之后的消息提示 -->
+    <view class="over" hidden="{{!isover}}">-----我是有底线的---</view>
+</view>

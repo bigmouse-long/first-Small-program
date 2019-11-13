@@ -1,2 +1,23 @@
 <!--pages/search/search.wxml-->
-<text>pages/search/search.wxml</text>
+<view>
+    <!-- 搜素框区域 -->
+    <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:change="onChange" bind:search="onSearch" bind:cancel="onCancel" />
+    <!-- 搜素建议展示区域 -->
+    <van-cell-group wx:if="{{isShow}}">
+        <block wx:for="{{searchList}}" wx:key="index">
+            <van-cell title="{{item.goods_name}}" bindtap="goodsList" data-id="{{item.goods_id}}" />
+        </block>
+    </van-cell-group>
+    <view wx:else>
+        <view class="history_title">
+            <text>历史搜索</text>
+            <van-icon name="delete" bindtap="clearHistory" />
+        </view>
+        <view class="history_body">
+            <block wx:for="{{historyList}}" wx:key="index">
+                <van-tag class="tag" round bindtap="goodsList" data-query="{{item}}">{{item}}</van-tag>
+            </block>
+        </view>
+    </view>
+
+</view>

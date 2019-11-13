@@ -1,2 +1,26 @@
 <!--pages/cates/cates.wxml-->
-<text>pages/cates/cates.wxml</text>
+<view class="cates">
+    <scroll-view class="left" scroll-y style="height:{{wh}}px;">
+        <van-sidebar active="{{ active }}" bind:change="onChange">
+            <van-sidebar-item title="{{item.cat_name}}" wx:for="{{catesList}}" wx:key="index" />
+        </van-sidebar>
+    </scroll-view>
+    <!-- 二级分类区域 -->
+    <scroll-view class="right" scroll-y style="height:{{wh}}px;">
+        <block wx:for="{{secondCates}}" wx:key="index">
+            <van-row>
+                <van-col span="24" style="text-align: center;">
+                    <text class="second_title" space="ensp">/  {{item.cat_name}}  /</text>
+                </van-col>
+            </van-row>
+            <van-row>
+                <block wx:for="{{item.children}}" wx:key="index">
+                    <van-col span="8" style="text-align: center;">
+                        <image src="{{item.cat_icon}}" class="thumbImg" bindtap="goodsList" data-id="{{item.cat_id}}" />
+                        <view class="thumbTitle">{{item.cat_name}} </view>
+                    </van-col>
+                </block>
+            </van-row>
+        </block>
+    </scroll-view>
+</view>

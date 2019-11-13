@@ -1,0 +1,8 @@
+{
+    "usingComponents": {},
+    "navigationBarTitleText": "商品列表",
+    "onReachBottomDistance": 50,
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#eee"
+
+}

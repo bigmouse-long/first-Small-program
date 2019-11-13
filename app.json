@@ -5,7 +5,8 @@
         "pages/cart/cart",
         "pages/search/search",
         "pages/my/my",
-        "pages/goods_detail/main"
+        "pages/goods_detail/main",
+        "pages/goods_list"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -44,6 +45,20 @@
                 "selectedIconPath": "/assets/icons/my-active.png"
             }
         ]
+    },
+    "usingComponents": {
+        "van-button": "./assets/vant/button/index",
+        "van-sidebar": "./assets/vant/sidebar/index",
+        "van-sidebar-item": "./assets/vant/sidebar-item/index",
+        "van-row": "./assets/vant/row/index",
+        "van-col": "./assets/vant/col/index",
+        "van-search": "./assets/vant/search/index",
+        "van-cell": "./assets/vant/cell/index",
+        "van-cell-group": "./assets/vant/cell-group/index",
+        "van-icon": "./assets/vant/icon/index",
+        "van-tag": "./assets/vant/tag/index",
+        "van-card": "./assets/vant/card/index"
+
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"
