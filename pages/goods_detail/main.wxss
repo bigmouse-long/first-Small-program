@@ -1,1 +1,115 @@
 /* pages/goods_detail/main.wxss */
+
+swiper {
+    height: 550rpx;
+}
+
+swiper image {
+    width: 100%;
+    height: 100%;
+}
+
+.box1 {
+    padding: 0 10rpx;
+}
+
+.price {
+    font-size: 40rpx;
+    color: red;
+    margin: 20rpx 0;
+}
+
+.goodsName {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    font-style: 26rpx;
+    padding-right: 40rpx;
+}
+
+.right {
+    width: 200rpx;
+    text-align: center;
+    border-left: 1px solid #eee;
+}
+
+.right view {
+    font-style: 20rpx;
+}
+
+.yunfei {
+    font-size: 26rpx;
+    color: #666;
+    font-weight: bold;
+    line-height: 80rpx;
+}
+
+.sep_line {
+    border-bottom: 15rpx solid #efefef;
+}
+
+.box2 {
+    font-size: 24rpx;
+    padding: 0 10rpx;
+}
+
+.box2 view {
+    line-height: 80rpx;
+}
+
+.box2 view text:nth-child(1) {
+    margin-right: 20rpx;
+}
+
+.box2 view text:nth-child(2) {
+    color: #666;
+}
+
+.box3 {
+    display: flex;
+    justify-content: space-between;
+    font-style: 24rpx;
+    padding: 25rpx 10rpx 25rpx 10rpx;
+}
+
+.box3 view text:nth-child(1) {
+    margin-right: 20rpx;
+}
+
+.box3 view text:nth-child(1) {
+    color: #666;
+}
+
+.tab2 {
+    font-style: 24rpx;
+}
+
+.tab2 .van-row {
+    border-top: 1rpx solid #eee;
+}
+
+.tab2 .van-row .van-col {
+    padding: 25rpx 0 25rpx 30rpx;
+}
+
+.tab2 .van-row .van-col:nth-child(1) {
+    border-right: 1rpx solid #eee;
+}
+
+.van-tabs {
+    z-index: 0;
+}
+
+.goods_Info {
+    padding-bottom: 50px;
+}
+
+.joinCart {
+    width: 50rpx;
+}
+
+.text-class {
+    text-align: center;
+}

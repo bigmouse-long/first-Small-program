@@ -6,7 +6,8 @@
         "pages/search/search",
         "pages/my/my",
         "pages/goods_detail/main",
-        "pages/goods_list"
+        "pages/goods_list",
+        "pages/order"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -57,8 +58,17 @@
         "van-cell-group": "./assets/vant/cell-group/index",
         "van-icon": "./assets/vant/icon/index",
         "van-tag": "./assets/vant/tag/index",
-        "van-card": "./assets/vant/card/index"
-
+        "van-card": "./assets/vant/card/index",
+        "van-tab": "./assets/vant/tab/index",
+        "van-tabs": "./assets/vant/tabs/index",
+        "wxparse": "./assets/wxparse/wxparse",
+        "van-goods-action": "./assets/vant/goods-action/index",
+        "van-goods-action-icon": "./assets/vant/goods-action-icon/index",
+        "van-goods-action-button": "./assets/vant/goods-action-button/index",
+        "van-stepper": "./assets/vant/stepper/index",
+        "van-checkbox": "./assets/vant/checkbox/index",
+        "van-swipe-cell": "./assets/vant/swipe-cell/index",
+        "van-submit-bar": "./assets/vant/submit-bar/index"
     },
     "style": "v2",
     "sitemapLocation": "sitemap.json"

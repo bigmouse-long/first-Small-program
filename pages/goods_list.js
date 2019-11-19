@@ -22,10 +22,10 @@ Page({
         // 避免重复发起请求，判断是否正在发起请求中
         isLoading: false
     },
-    goodsDetail(e){
+    goodsDetail(e) {
         // console.log(e)
         wx.navigateTo({
-            url:'/pages/goods_detail/main?id='+e.target.dataset.id
+            url: '/pages/goods_detail/main?goods_id=' + e.target.dataset.id
         })
     },
     /**
@@ -54,7 +54,7 @@ Page({
                 pagesize: this.data.pagesize
             },
             success(res) {
-                console.log(res);
+                // console.log(res);
                 if (res.data.meta.status !== 200) {
                     return wx.showToast({
                         title: '获取数据失败',
@@ -63,12 +63,12 @@ Page({
                     })
                 }
                 that.setData({
-                    goodsList: [...that.data.goodsList,...res.data.message.goods],
+                    goodsList: [...that.data.goodsList, ...res.data.message.goods],
                     total: res.data.message.total,
                     isLoading: false
                 })
             }
-            
+
         })
         callBack && callBack()
 

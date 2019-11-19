@@ -1,1 +1,72 @@
 /* pages/cart/cart.wxss */
+
+.empty_cart {
+    font-size: 26rpx;
+    color: #666;
+    text-align: center;
+    padding-top: 200rpx;
+}
+
+.empty_cart image {
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.price {
+    color: red;
+    font-size: 26rpx;
+    font-weight: bold;
+}
+
+.fullCart {
+    padding-bottom: 50px;
+}
+
+.van-card {
+    border-bottom: 1px solid #eee;
+    padding-left: 7px!important;
+}
+
+.thumb {
+    display: flex;
+    align-items: center;
+    width: 118px;
+}
+
+.thumb image {
+    width: 90px;
+    height: 90px;
+    margin-left: 8px;
+}
+
+.van-card__thumb {
+    width: 118px!important;
+}
+
+.close {
+    background: #ff4444;
+    width: 65px;
+    height: 100%;
+    font-size: 13px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkFull {
+    margin-left: 7px;
+}
+
+.van-submit-bar__button {
+    padding-right: 50px;
+}

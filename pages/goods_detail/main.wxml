@@ -1,2 +1,69 @@
 <!--pages/goods_detail/main.wxml-->
-<text>pages/goods_detail/main.wxml</text>
+<!-- 商品轮播图区域 -->
+<swiper indicator-dots circular>
+    <block wx:for="{{goodsInfo.pics}}" wx:key='index'>
+        <swiper-item>
+            <image src="{{item.pics_big}}" bindtap="previewImg" data-url="{{item.pics_big}}" />
+        </swiper-item>
+    </block>
+</swiper>
+<!-- 商品信息区域 -->
+<view class="goods_Info">
+    <!-- 价格名称运费 -->
+    <view class="box1">
+        <view class="price">￥{{goodsInfo.goods_price}}</view>
+        <view class="goodsName">
+            <view class="left">{{goodsInfo.goods_name}}</view>
+            <view class="right">
+                <van-icon name="star-o"></van-icon>
+                <view>收藏</view>
+            </view>
+        </view>
+        <view class="ynfei">快递:免运费</view>
+    </view>
+    <view class="sep_line"></view>
+    <!-- 促销已选区 -->
+    <view class="box2">
+        <!-- 促销 -->
+        <view>
+            <text>促销</text>
+            <text>满300减3元</text>
+        </view>
+        <!-- 已选 -->
+        <view>
+            <text>已选</text>
+            <text>黑色/S/针织衫</text>
+        </view>
+    </view>
+    <view class="sep_line"></view>
+    <!-- 收货地址区域 -->
+    <view class="box3" bindtap="chooseAddress">
+        <view>
+            <text>收货地址</text>
+            <text>{{addressInfo}}</text>
+        </view>
+        <van-icon name="arrow"></van-icon>
+    </view>
+    <view class="sep_line"></view>
+    <!-- 商品详情区域 -->
+    <van-tabs>
+        <van-tab title="图文详情">
+            <wxparse data="{{goodsInfo.goods_introduce}}"></wxparse>
+        </van-tab>
+        <van-tab title="规格参数" class="tab2">
+            <block wx:for="{{goodsInfo.attrs}}" wx:key="index">
+                <van-row>
+                    <van-col span="10">{{item.attr_name}}</van-col>
+                    <van-col span="14">{{item.attr_value}}</van-col>
+                </van-row>
+            </block>
+        </van-tab>
+    </van-tabs>
+
+    <van-goods-action>
+        <van-goods-action-icon icon="chat-o" text="客服" open-type="contact" />
+        <van-goods-action-icon icon="cart-o" text="购物车" url="/pages/cart/cart" link-type="switchTab" info="{{count}}" />
+        <van-goods-action-button text="加入购物车" type="warning" class="joinCart" bind:click="addCartTo" />
+        <van-goods-action-button text="立即购买" bind:click="onClickButton" class="joinCart" />
+    </van-goods-action>
+</view>

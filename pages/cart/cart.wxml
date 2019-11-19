@@ -1,2 +1,32 @@
 <!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<!-- 空白的购物车 -->
+<view class="empty_cart" wx:if="{{isEmpty}}">
+    <image src="/assets/\images/cart_empty@2x.png"></image>
+    <view>哎呦，购物车是空的欧！！</view>
+</view>
+<!-- 非空购物车 -->
+<view class="fullCart" wx:else>
+    <!-- 标题 -->
+    <van-cell title="购物车列表" icon="shop-o" />
+    <!-- 循环渲染购物车列表 -->
+    <block wx:for="{{cartInfo}}" wx:key="id">
+        <van-swipe-cell right-width="{{ 65 }}" left-width="{{ 0.1 }}">
+            <van-card title="{{item.name}}">
+                <!-- 自定义插槽进行渲染 -->
+                <view slot="desc" class="desc">
+                    <text class="price">￥{{item.price}}</text>
+                    <van-stepper value="{{item.count}}" bind:change="changeCount" data-id="{{item.id}}" />
+                </view>
+                <!-- 自定义插槽渲染复选框 -->
+                <view slot="thumb" class="thumb">
+                    <van-checkbox value="{{ item.isCheck }}" bind:change="statusChange" data-id="{{item.id}}" checked-color="#d81e06" />
+                    <image src=" {{item.pic}} " />
+                </view>
+            </van-card>
+            <view slot="right" class="close" bindtap="clearGoods" data-id="{{item.id}}">删除</view>
+        </van-swipe-cell>
+    </block>
+    <van-submit-bar price="{{ allMoney }}" button-text="提交订单" bind:submit="submitOrder" tip="{{ false }}" class="joinTip">
+        <van-checkbox class="checkFull" value="{{ allChecked }}" bind:change="allChange" checked-color="#d81e06">全选</van-checkbox>
+    </van-submit-bar>
+</view>
